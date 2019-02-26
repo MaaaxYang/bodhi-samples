@@ -42,4 +42,19 @@ public class OKHttpUtil {
         return bytes;
     }
 
+
+    public static byte[] getClassMap(String name) throws IOException {
+
+        Request request = new Request.Builder()
+                .url("http://localhost:10000/my/class/map/"+name)
+                .get()
+                .build();
+
+        Response response = okHttpClient.newCall(request).execute();
+
+        byte[] bytes = response.body().bytes();
+
+        return bytes;
+    }
+
 }

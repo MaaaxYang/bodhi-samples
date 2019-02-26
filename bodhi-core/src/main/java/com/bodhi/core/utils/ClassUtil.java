@@ -1,5 +1,6 @@
 package com.bodhi.core.utils;
 
+import com.bodhi.core.MapClassloader;
 import com.bodhi.core.MyClassLoader;
 
 import java.io.File;
@@ -29,4 +30,10 @@ public class ClassUtil {
         return obj;
     }
 
+    public static <T> T loadClassPackageByApi(String className) throws Exception{
+        MapClassloader loader = new MapClassloader();
+        Class clz = Class.forName(className,true,loader);
+        T obj = (T) clz.newInstance();
+        return obj;
+    }
 }
