@@ -24,8 +24,8 @@ public class SimpleClient {
 
     public static void main2(String[] args) throws Exception{
         Object obj = ClassUtil.loadClassByFilePath(
-                "/Users/yanghaoran/coding/bodhi/lib/hmily-core.jar",
-                "org.dromara.hmily.core.logo.HmilyLogo");
+                "/Users/yanghaoran/coding/bodhi/aa.jar",
+                "aa.bb.cc.DD");
         Class cls = obj.getClass();
     }
 }
